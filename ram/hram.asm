@@ -186,6 +186,6 @@ hFunctionJump::     db ; $c3 jp
 hFunctionTarget::
 hFunctionTargetLo:: db
 hFunctionTargetHi:: db
-hDelayFrameLY:: db
 
-	ds 18
+
+	hDelayFrameLY:: db
