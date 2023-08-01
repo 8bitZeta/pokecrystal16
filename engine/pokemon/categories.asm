@@ -7,7 +7,7 @@ GetMoveCategoryName:
     call GetMoveAttribute
 
 ; Mask out the type
-	and ~TYPE_MASK
+	and $ff ^ TYPE_MASK
 ; Shift the category bits into the range 0-2
 	rlc a
 	rlc a
@@ -16,6 +16,7 @@ GetMoveCategoryName:
 	ld hl, CategoryNames
 	ld e, a
 	ld d, 0
+	add hl, de
 	add hl, de
 	ld a, [hli]
 	ld h, [hl]
